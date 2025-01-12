@@ -105,16 +105,16 @@ const Select = ({options, isMultiSelect, onSelectionChange, placeholder}: Select
 
     return (
         <div className={styles.container} ref={containerRef} data-testid="select-container">
-            {!isMultiSelect ? <div className={styles.inputContainer}>
+             <div className={styles.inputContainer}>
                 <input
-                    type="text"
+                    type="search"
                     className={styles.input}
                     value={inputValue}
                     onChange={handleInputChange}
                     onFocus={() => setIsOpen(true)}
                     placeholder={placeholder}
                 />
-            </div> : null}
+            </div>
 
             {isMultiSelect ? (
                 <div className={styles.multiSelectContainer}>
