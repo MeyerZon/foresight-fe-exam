@@ -1,0 +1,149 @@
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainer {
+    position: relative;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.input {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    border: 3px solid var(--border-color);
+    background-color: var(--background-color);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color);
+}
+
+.input:focus {
+    outline: none;
+    transform: translate(-2px, -2px);
+    box-shadow: calc(var(--shadow-offset) + 2px) calc(var(--shadow-offset) + 2px) 0 var(--border-color);
+}
+
+/* Single select dropdown */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 3px solid var(--border-color);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color);
+}
+
+.option {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.option:last-child {
+    border-bottom: none;
+}
+
+.option:hover {
+    background-color: var(--primary-color);
+    transform: translate(-2px, -2px);
+}
+
+/* Multi select container */
+.multiSelectContainer {
+    border: 3px solid var(--border-color);
+    background-color: var(--background-color);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color);
+}
+
+/* Action buttons container */
+.multiSelectContainer > div:first-child {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.multiSelectContainer > div:first-child button {
+    flex: 1;
+    font-size: 14px;
+    padding: 6px 12px;
+    margin: 0;
+    background-color: var(--background-color);
+    border: 2px solid var(--border-color);
+    box-shadow: 2px 2px 0 var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.multiSelectContainer > div:first-child button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 var(--border-color);
+}
+
+/* Collapse button */
+.collapseButton {
+    width: 100%;
+    padding: 8px 12px;
+    text-align: left;
+    background-color: var(--background-color);
+    border: none;
+    border-bottom: 2px solid var(--border-color);
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.collapseButton:hover {
+    background-color: var(--primary-color);
+}
+
+/* Options list */
+.multiSelectContainer ul {
+    margin: 0;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    list-style: none;
+}
+
+.multiSelectContainer li {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
+}
+
+.multiSelectContainer li:last-child {
+    border-bottom: none;
+}
+
+.multiSelectContainer li:hover {
+    background-color: var(--primary-color);
+}
+
+/* Checkbox and label */
+.multiSelectContainer input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
+    border: 2px solid var(--border-color);
+}
+
+.multiSelectContainer label {
+    margin-left: 8px;
+    cursor: pointer;
+    user-select: none;
+}
